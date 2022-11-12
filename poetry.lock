@@ -172,6 +172,17 @@ pytz = ">=2020.1"
 test = ["hypothesis (>=5.5.3)", "pytest (>=6.0)", "pytest-xdist (>=1.31)"]
 
 [[package]]
+name = "pandas-stubs"
+version = "1.5.1.221024"
+description = "Type annotations for pandas"
+category = "dev"
+optional = false
+python-versions = ">=3.8,<3.11"
+
+[package.dependencies]
+types-pytz = ">=2022.1.1"
+
+[[package]]
 name = "pluggy"
 version = "0.13.1"
 description = "plugin and hook calling mechanisms for python"
@@ -307,6 +318,14 @@ anyio = ">=3.4.0,<5"
 full = ["itsdangerous", "jinja2", "python-multipart", "pyyaml", "requests"]
 
 [[package]]
+name = "types-pytz"
+version = "2022.6.0.1"
+description = "Typing stubs for pytz"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -378,8 +397,8 @@ python-versions = ">=3.7"
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.10"
-content-hash = "abe3d2e89eb433377e9ade253b81e3b9575234f63ac61e460353e891d448d4d8"
+python-versions = ">=3.10,<3.11"
+content-hash = "854f695da7d041f1bd9a3f0a69c266a8fdfe3f5209137226c6068e7af68f68db"
 
 [metadata.files]
 anyio = []
@@ -398,6 +417,7 @@ openpyxl = []
 orjson = []
 packaging = []
 pandas = []
+pandas-stubs = []
 pluggy = []
 py = []
 pydantic = []
@@ -410,6 +430,7 @@ pyyaml = []
 six = []
 sniffio = []
 starlette = []
+types-pytz = []
 typing-extensions = []
 uvicorn = []
 uvloop = []

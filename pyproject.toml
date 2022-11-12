@@ -6,13 +6,14 @@ version = "0.1.0"
 
 [tool.poetry.dependencies]
 fastapi = "^0.86.0"
-pandas = "^1.5.1"
-python = "^3.10"
-uvicorn = {extras = ["standard"], version = "^0.19.0"}
 openpyxl = "^3.0.10"
 orjson = "^3.8.1"
+pandas = "^1.5.1"
+python = ">=3.10,<3.11"
+uvicorn = {extras = ["standard"], version = "^0.19.0"}
 
 [tool.poetry.dev-dependencies]
+pandas-stubs = "^1.5.1"
 pytest = "^5.2"
 
 [build-system]

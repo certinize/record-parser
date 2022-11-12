@@ -3,7 +3,6 @@ import json
 
 import pandas
 from fastapi import FastAPI
-from fastapi.responses import ORJSONResponse
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -19,13 +18,13 @@ async def convert_excel_to_json(file: ExcelFile):
     spreadsheet = base64.b64decode(file.file)
 
     if file.ext == "xlsx":
-        df = pandas.read_excel(spreadsheet, engine="openpyxl")
+        df = pandas.read_excel(spreadsheet, engine="openpyxl")  # type: ignore
     elif file.ext == "xls":
-        df = pandas.read_excel(spreadsheet)
+        df = pandas.read_excel(spreadsheet)  # type: ignore
     elif file.ext == "csv":
-        df = pandas.read_csv(spreadsheet)
+        df = pandas.read_csv(spreadsheet)  # type: ignore
     else:
-        df = pandas.read_json(spreadsheet)
+        df = pandas.read_json(spreadsheet)  # type: ignore
 
-    data = json.loads(df.to_json(orient="records"))
+    data = json.loads(df.to_json(orient="records"))  # type: ignore
     return data
